@@ -1,4 +1,4 @@
-name: 'Line length warnings'
+name: 'c_action'
 description: 'Checks length >= 80 chars'
 author: 'Arthur Wambst'
 
