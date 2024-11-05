@@ -1,13 +1,6 @@
-name: 'Line length warnings'
-description: 'Checks length >= 80 chars'
-author: 'Arthur Wambst'
+on: [push]
 
-inputs:
-  token:
-   description: “Username”
-   required: true
-
-runs:
+jobs:
   using: "composite"
   steps:
     - uses: actions/checkout@v4
