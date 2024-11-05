@@ -1,7 +1,6 @@
 on: [push]
 
 jobs:
-  using: "composite"
   steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-dotnet@v3
