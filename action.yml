@@ -11,7 +11,7 @@ runs:
   using: "composite"
   steps:
     - uses: actions/checkout@v4
-    - run: ./testBash.bash < result.txt
+    - run: ./testBash.bash >> result.txt
       shell: bash
     - run: ls
       shell: bash
