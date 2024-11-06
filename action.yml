@@ -2,10 +2,10 @@ name: 'c_action'
 description: 'Checks length >= 80 chars'
 author: 'Arthur Wambst'
 
-inputs:
-  token:
-   description: “Username”
-   required: true
+#inputs:
+  #   token:
+  #   description: “Username”
+  #required: false
 
 runs:
   using: "composite"
@@ -13,7 +13,7 @@ runs:
     - uses: actions/checkout@v4
     - run: ls
       shell: bash
-    - run: ./testBash.bash
+    - run: ./line_length.sh
       shell: bash
     - run: ls
       shell: bash
