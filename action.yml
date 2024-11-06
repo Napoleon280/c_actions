@@ -13,7 +13,8 @@ runs:
     - uses: actions/checkout@v4
     - run: ls
       shell: bash
-    - run: ./line_length.sh
+    - name: run line_length.sh
+      run: line_length.sh
       shell: bash
     - run: ls
       shell: bash
