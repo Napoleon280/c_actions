@@ -11,18 +11,15 @@ runs:
   using: "composite"
   steps:
     - uses: actions/checkout@v4
-    - run: ls
-      shell: bash
     - name: Set GitHub Path
       run: echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
       shell: bash
       env:
         GITHUB_ACTION_PATH: ${{ github.action_path }}
     - name: run line_length.sh
-      run: line_length.sh
+      run: line_length.sh >> col_excess.txt
       shell: bash
-    - run: ls
-      shell: bash
-    - run: pwd
-      shell: bash
-
+    - uses: actions/upload-artifact@v4
+      with:
+        name: col_excess.txt
+        path: col_excess.txt
