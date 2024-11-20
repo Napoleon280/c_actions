@@ -23,7 +23,7 @@ runs:
     - name: run line_length.sh
       run: line_length.sh >> col_excess.txt
       shell: bash
-    - uses: LouisBrunner/checks-action@latest
+    - uses: LouisBrunner/checks-action@v2.0.0
       if: always()
       with:
         token: ${{ inputs.token }}
