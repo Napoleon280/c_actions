@@ -6,6 +6,10 @@ author: 'Arthur Wambst'
   #   token:
   #   description: “Username”
   #required: false
+inputs:
+  token:
+   description: “secret token”
+   required: true
 
 runs:
   using: "composite"
@@ -22,7 +26,7 @@ runs:
     - uses: LouisBrunner/checks-action@latest
       if: always()
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ inputs.token }}
         name: Code coverage
         conclusion: ${{ job.status }}
         output: '{"summary":"Code coverage"}'
