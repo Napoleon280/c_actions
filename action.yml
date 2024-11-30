@@ -29,4 +29,4 @@ runs:
         token: ${{ inputs.token }}
         name: Columns >= 80
         conclusion: ${{ job.status }}
-        output: col_excess.txt
+        output: '{"summary":col_excess.txt}'
