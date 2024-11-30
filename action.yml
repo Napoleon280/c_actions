@@ -29,5 +29,5 @@ runs:
         token: ${{ inputs.token }}
         name: Columns >= 80
         conclusion: ${{ job.status }}
-        output: '{"summary":"Files with more than 80 cols"}'
+        output: '{"summary":"Code Coverage"}'
         output_text_description_file: col_excess.txt
