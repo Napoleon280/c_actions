@@ -27,7 +27,7 @@ runs:
       if: always()
       with:
         token: ${{ inputs.token }}
-        name: Columns >= 80
+        name: "Columns >= 80"
         conclusion: ${{ job.status }}
-        output: '{"summary":"Code Coverage"}'
+        output: '{"summary":"Columns >= 80"}'
         output_text_description_file: col_excess.txt
