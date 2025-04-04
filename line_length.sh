@@ -1,4 +1,4 @@
-for a in $(find $PWD | grep -E "\.c$|\.h$")
+for a in $(find $PWD | grep -E "\.c$|\.h$|\.rs$")
 do 
 	((PARSED = 0))
 	((LINE = 0))
